@@ -4,7 +4,7 @@ npm init -y
 npm install typescript --save-dev
 npx tsc --init
 
-Trocar de "module": "nodenext" e "target": "esnext" para "module": "ESNext" e "target": "ES6"
+Trocar no tsconfig.json de "module": "nodenext" e "target": "esnext" para "module": "ESNext" e "target": "ES6"
 
 "compilerOptions": {
     "module": "ESNext",
@@ -13,10 +13,13 @@ Trocar de "module": "nodenext" e "target": "esnext" para "module": "ESNext" e "t
     ...
 }
 
-Adicionar no package.json para executar npm run build e npm start
+Adicionar no package.json dentro de scripts para executar npm run build e npm start
 
-"build": "tsc",
-"start": "node src/app.js"
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "node src/app.js"
+  },
 
 e executar no terminal
 
